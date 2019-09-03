@@ -12,7 +12,6 @@
         target="_blank"
       >
         <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -22,11 +21,10 @@
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+import HelloWorld from './components/HelloWorld';
 
-export default Vue.extend({
+export default {
   name: 'App',
   components: {
     HelloWorld,
@@ -34,5 +32,5 @@ export default Vue.extend({
   data: () => ({
     //
   }),
-});
+};
 </script>
