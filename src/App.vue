@@ -2,8 +2,8 @@
   <v-app>
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <span>ViandasYA: la gauchita   </span>
+        <span class="font-weight-light">"DONDE ESTA MI HAMBURGUESA!?!?"</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
@@ -16,18 +16,20 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <v-row>
+        <FormIngresoCliente />
+        </v-row>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
-
+import FormIngresoCliente from './components/FormIngresoCliente';
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    HelloWorld,FormIngresoCliente
   },
   data: () => ({
     //

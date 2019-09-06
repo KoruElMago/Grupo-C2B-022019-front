@@ -1,0 +1,51 @@
+<template>
+  <v-container>
+    <v-layout
+      text-center
+      wrap
+    >
+
+<v-col
+          cols="12"
+          md="4"
+        >
+          <v-text-field
+              v-model="Nombre"
+              :rules="nameRules"
+              :counter="15"
+              label="Nombre"
+              required
+          ></v-text-field>
+          <v-text-field
+              v-model="Apellido"
+              :rules="nameRules"
+              :counter="15"
+              label="Apellido"
+              required
+          ></v-text-field>
+          <v-text-field
+              v-model="email"
+              :rules="emailRules"
+              :counter="40"
+              label="email"
+              required
+          ></v-text-field>
+
+          <v-text-field
+              v-model="telefono"
+              :counter="15"
+              label="telefono"
+              required
+          ></v-text-field>
+          
+          <v-text-field
+              v-model="localidadYDireccion"
+              :counter="100"
+              label="localidadYDireccion"
+              required
+          ></v-text-field>
+        </v-col>
+
+    </v-layout>
+  </v-container>
+</template>
