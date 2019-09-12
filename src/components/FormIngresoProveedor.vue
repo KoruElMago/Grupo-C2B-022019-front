@@ -1,0 +1,11 @@
+<template>
+    <v-container>
+            <v-text-field
+              v-model="Nombre"
+              :rules="nameRules"
+              :counter="15"
+              label="Nombre"
+              required
+            ></v-text-field>
+    </v-container>
+</template>

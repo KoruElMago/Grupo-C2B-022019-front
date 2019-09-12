@@ -17,19 +17,28 @@
 
     <v-content>
       <v-row>
-        <FormIngresoCliente />
-        </v-row>
+        <v-col> <FormIngresoCliente /> </v-col>
+        <v-col> <FormIngresoProveedor /> </v-col>
+      </v-row>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+//import HelloWorld from './components/HelloWorld';
 import FormIngresoCliente from './components/FormIngresoCliente';
+import FormIngresoProveedor from './components/FormIngresoProveedor';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+
+
 export default {
   name: 'App',
   components: {
-    HelloWorld,FormIngresoCliente
+    FormIngresoCliente,FormIngresoProveedor
   },
   data: () => ({
     //
