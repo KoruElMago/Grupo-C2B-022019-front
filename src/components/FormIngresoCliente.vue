@@ -89,10 +89,14 @@
 
     methods: {
       validate () {
-        if (this.$refs.form.validate()) {
-          this.snackbar = true
-        }
-      },
+                let currentObj = this;
+                this.axios.post('http://localhost:8083/yourPostApi', {
+                    name: this.name,
+                    description: this.description
+                })
+                .then( response => currentObj.output = response.data )
+                .catch( error => currentObj.output = error );
+            },
       reset () {
         this.$refs.form.reset()
       },
