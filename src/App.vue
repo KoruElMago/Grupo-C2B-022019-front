@@ -16,12 +16,11 @@
     </v-app-bar>
 
     <v-content>
-      <!--
+
       <v-row>
         <v-col> <FormIngresoCliente /> </v-col>
         <v-col> <FormIngresoProveedor /> </v-col>
       </v-row> 
-      -->
 
       <div class="row justify-content-center">
             <div class="col-md-8">
@@ -50,14 +49,22 @@ import HelloWorld from './components/HelloWorld';
 import FormIngresoCliente from './components/FormIngresoCliente';
 import FormIngresoProveedor from './components/FormIngresoProveedor';
 
+import Vue from "vue";
+import VueRouter from "vue-router";
+import axios from "axios";
+import VueAxios from "vue-axios";
+
 let port = process.env.PORT || 8083;
 Vue.use(port);
+
+Vue.use(VueRouter);
+Vue.use(VueAxios, axios);
 
 const router = new VueRouter({
   mode: 'history',
   base: __dirname,
   routes: [
-    { path: '/', component: HelloWorld }, // El origen es el template
+    { path: '/home', component: HelloWorld }, // El origen es el template
     { path: '/service/login', component: FormIngresoProveedor, props: true }, // Pass route.params to props
     { path: '/client/login', component: FormIngresoCliente, props: { name: 'desconocido' }}, // static values
   ]
@@ -67,7 +74,7 @@ export default {
   router,
   name: "App",
   components: {
-    FormIngresoCliente,FormIngresoProveedor
+    FormIngresoCliente, FormIngresoProveedor
   },
   data: () => ({
     //
