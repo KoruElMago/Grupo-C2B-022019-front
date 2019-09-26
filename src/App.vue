@@ -20,7 +20,16 @@
       <v-row>
         <v-col> <FormIngresoCliente /> </v-col>
         <v-col> <FormIngresoProveedor /> </v-col>
-      </v-row> 
+      </v-row>
+
+      <v-row>
+        <GmapMap 
+          :center="{ lat: -53.0, lng: -28.0 }" 
+          :zoom="8"
+      map-type-id="terrain"
+      style="width: 500px; height: 300px"
+  >  </GmapMap> 
+      </v-row>
 
       <div class="row justify-content-center">
             <div class="col-md-8">
@@ -54,8 +63,18 @@ import VueRouter from "vue-router";
 import axios from "axios";
 import VueAxios from "vue-axios";
 
+import * as VueGoogleMaps from "vue2-google-maps";
+
 let port = process.env.PORT || 8083;
 Vue.use(port);
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: "AIzaSyDLbweYzz5qiBnbUma0e9w8Et68b3Cakqk",
+    libraries: "places,drawing,visualization",
+  },
+  installComponents: true
+});
 
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
