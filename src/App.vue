@@ -70,7 +70,7 @@ Vue.use(port);
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: "CLAVE",
+    key: process.env.VUE_APP_GOOGLEKEY,
     libraries: "places,drawing,visualization",
   },
   installComponents: true
