@@ -29,3 +29,15 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Set the proyect as a Heroku App
+```
+heroku git:remote -a viandas-la-gauchita
+```
+
+### Deploy in Heroku
+```
+git push heroku master
+```
+where *heroku* is the package 
