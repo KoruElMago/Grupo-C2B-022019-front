@@ -65,12 +65,11 @@ import VueAxios from "vue-axios";
 
 import * as VueGoogleMaps from "vue2-google-maps";
 
-let port = process.env.PORT || 8083;
-Vue.use(port);
+let clave = process.env.VUE_APP_GOOGLEKEY;
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: process.env.VUE_APP_GOOGLEKEY,
+    key: clave,
     libraries: "places,drawing,visualization",
   },
   installComponents: true
